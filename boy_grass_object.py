@@ -9,9 +9,10 @@ class Ball:
     def __init__(self):
         self.x, self.y = random.randint(100,700), 0
         self.image = load_image('ball41x41.png')
+        self.speed = 5
 
     def update(self):
-        pass
+        self.y += self.speed
 
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
