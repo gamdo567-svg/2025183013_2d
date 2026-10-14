@@ -5,29 +5,9 @@ import random
 
 
 # Game object class here
-class Zombie:
-    def __init__(self):
-        self.x, self.y = random.randint(100, 700), 150
-        self.image = load_image('zombie_run_animation.png')
-        self.frame = 0
-    def update(self):
-        self.frame = (self.frame + 1) % 8
-        self.x -= 5
-        if self.x < 0:
-            self.x = 800
-    def draw(self):
-        frame_width = self.image.w // 10
-        frame_height = self.image.h
-        scale = 0.4
+class Ball:
+    pass
 
-        self.image.clip_composite_draw(
-            self.frame * frame_width, 0,
-            frame_width, frame_height,
-            0, 'h',                
-            self.x, self.y,
-            int(frame_width * scale),
-            int(frame_height * scale)
-        )
 class Boy:
     def __init__(self):
         self.x, self.y = random.randint(100, 700), 90
@@ -71,8 +51,6 @@ def reset_world():
     world.append(grass)
     team = [Boy() for i in range(11)]
     world += team
-    zombie_team = [Zombie() for i in range(5)]
-    world += zombie_team
 
 def update_world():
     for o in world:
