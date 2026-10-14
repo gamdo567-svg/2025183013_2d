@@ -16,7 +16,7 @@ class Ball:
     def update(self):
         self.dt += 1
 
-        if self.y < 600:
+        if self.y < 600 - self.sizeY // 2:
             self.y += self.speed
         else:
             self.y += math.sin(self.dt) * 10
