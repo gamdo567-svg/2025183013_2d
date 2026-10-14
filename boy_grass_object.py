@@ -19,7 +19,7 @@ class Ball:
         if self.y < 600 - self.sizeY // 2:
             self.y += self.speed
         else:
-            self.y += math.sin(self.dt) * 10
+            self.y += math.sin(self.dt) * self.speed
         
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y, self.sizeX, self.sizeY)
