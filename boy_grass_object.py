@@ -10,14 +10,14 @@ class Ball:
         self.x, self.y = random.randint(100,700), 0
         self.image = load_image('ball41x41.png')
         self.speed = random.randint(2,8)
-
+        self.sizeX, self.sizeY = 10, 10
     def update(self):
         if self.y < 600:
             self.y += self.speed
         
 
     def draw(self):
-        self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
+        self.image.clip_draw(0, 0, 41, 41, self.x, self.y, self.sizeX, self.sizeY)
 
     pass
 
