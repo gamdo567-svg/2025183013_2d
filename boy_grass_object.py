@@ -7,14 +7,15 @@ import random
 # Game object class here
 class Ball:
     def __init__(self):
-        pass
+        self.x, self.y = 0, 0
+        self.image = load_image('ball41x41.png')
 
     def update(self):
         pass
 
     def draw(self):
         pass
-    
+
     pass
 
 class Boy:
@@ -58,6 +59,9 @@ def reset_world():
     running = True
     grass = Grass()
     world.append(grass)
+    ball = Ball()
+    world.append(ball)
+    
     team = [Boy() for i in range(11)]
     world += team
 
