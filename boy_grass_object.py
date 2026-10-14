@@ -6,6 +6,15 @@ import random
 
 # Game object class here
 class Ball:
+    def __init__(self):
+        pass
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass
+    
     pass
 
 class Boy:
