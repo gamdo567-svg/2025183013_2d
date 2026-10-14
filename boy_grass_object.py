@@ -7,7 +7,7 @@ import random
 # Game object class here
 class Ball:
     def __init__(self):
-        self.x, self.y = random.randint(100,700), 0
+        self.x, self.y = random.randint(35,765), 0
         self.image = load_image('ball41x41.png')
         self.speed = random.randint(4,10)
         self.sizeX = self.sizeY = random.randint(20,70)
