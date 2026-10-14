@@ -9,9 +9,9 @@ class Ball:
     def __init__(self):
         self.x, self.y = random.randint(100,700), 0
         self.image = load_image('ball41x41.png')
-        self.speed = random.randint(2,8)
-        self.sizeX = self.sizeY = random.randint(20,100)
-        self.dt = 0
+        self.speed = random.randint(4,10)
+        self.sizeX = self.sizeY = random.randint(20,70)
+        self.dt = self.speed
 
     def update(self):
         self.dt += 1
@@ -19,7 +19,7 @@ class Ball:
         if self.y < 600 - self.sizeY // 2:
             self.y += self.speed
         else:
-            self.y += math.sin(self.dt) * self.speed
+            self.y += math.sin(self.dt) * 5
         
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y, self.sizeX, self.sizeY)
