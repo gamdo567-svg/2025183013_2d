@@ -9,7 +9,7 @@ class Ball:
     def __init__(self):
         self.x, self.y = random.randint(100,700), 0
         self.image = load_image('ball41x41.png')
-        self.speed = 5
+        self.speed = random.randint(2,8)
 
     def update(self):
         self.y += self.speed
